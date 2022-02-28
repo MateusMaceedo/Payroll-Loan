@@ -10,5 +10,5 @@ Requisitos não funcionais é você poder levantar qual é o TPS que a aplicaç�
 
 Passos para a migração: 
 
-- [x] 1 - Desenvolvendo microservices usando [DevPrime](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqazlmWFlzTlBCbThJN3RkT3JSMXpsQ2JHbFR0QXxBQ3Jtc0ttNzlmOXRqd0xEbzZxX3hnWjQxbThvVHhXa0V3ZXFicHdSeUszbmNoSlliNTh4MVJfaUZBZDgtYWNQVlFhWG1talBaWnIzMWNzVTI4X28wSHo5Q3NPMTA3UmM5d2pBYm14VWYzcm96dVREQk80T1QtUQ&q=https%3A%2F%2Fdevprime.tech)
+- [x] 1 - Desenvolvendo microservices usando [DevPrime](https://devprime.tech/)
 
