@@ -7,3 +7,8 @@ Requisitos não funcionais é você poder levantar qual é o TPS que a aplicaç�
 <h1 align="center">
   <img src="https://github.com/MateusMaceedo/Payroll_Loan/blob/main/img/CaseITUBE.drawio.png?raw=true" alt="CaseITUBE.drawio.png">
 </h1>
+
+Passos para a migração: 
+
+- [x] 1 - Desenvolvendo microservices usando DevPrime
+
