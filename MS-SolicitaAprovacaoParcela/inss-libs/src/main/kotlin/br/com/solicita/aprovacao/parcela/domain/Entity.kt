@@ -1,4 +1,7 @@
 package br.com.solicita.aprovacao.parcela.domain
 
-class Entity {
+import java.util.UUID
+
+interface Entity {
+    val uui: UUID
 }

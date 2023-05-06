@@ -6,17 +6,18 @@ import br.com.solicita.aprovacao.parcela.domain.exceptions.RequiredFieldExceptio
 import java.util.*
 
 data class NewAddress(
+        // validar informações do contrato
         val cep: String,
         val street: String,
         val district: String,
         val city: String,
         val state: String
 ) {
-    fun create() = AddressEntity(UUID.randomUUID(), cep, street, district, city, state)
+    fun create() = AprovacaoEntity(UUID.randomUUID(), cep, street, district, city, state)
 }
 
 
-data class AddressEntity(
+data class AprovacaoEntity(
         override val uuid: UUID,
         val cep: String,
         val street: String,
