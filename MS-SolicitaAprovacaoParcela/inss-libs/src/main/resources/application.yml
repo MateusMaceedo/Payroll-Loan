@@ -1,0 +1,22 @@
+####################################################################
+# Get free access to developer context at https://cloud.axoniq.io/ #
+####################################################################
+axon:
+  axonserver:
+    servers: axonserver.cloud.axoniq.io:443
+    keep-alive-time: 0
+    ssl-enabled: true
+    context:
+    token: #** your application binding's token here **#
+
+####################################################################
+# Default H2 Datasource                                            #
+####################################################################
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
