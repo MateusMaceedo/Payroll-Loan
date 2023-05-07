@@ -1,5 +1,5 @@
 ####################################################################
-# Get free access to developer context at https://cloud.axoniq.io/ #
+# Configurações da aplicação                                       #
 ####################################################################
 axon:
   axonserver:
@@ -10,13 +10,50 @@ axon:
     token: #** your application binding's token here **#
 
 ####################################################################
-# Default H2 Datasource                                            #
+# Config infra da app                                              #
 ####################################################################
 spring:
+  ####################################################################
+  # Config localstack                                                #
+  ####################################################################
+  cloud:
+    aws:
+      region:
+        static: us-west-2
+      stack:
+        endpoint: http://localhost:4566
+      secretsmanager:
+        endpoint: http://localhost:4566
+      sqs:
+        endpoint: http://localhost:4566
+        queue:
+          envia-aprovacao-parcela-inss-queue:
+            url: http://localhost:4566/000000000000/example
+    ####################################################################
+    # Config dos recursos da aws                                       #
+    ####################################################################
+  aws:
+    region: us-west-2
+    accessKeyId: your-access-key-id
+    secretAccessKey: your-secret-access-key
+    ####################################################################
+    # Config kafka, produtores e consumidores                          #
+    ####################################################################
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: my-group
+      auto-offset-reset: earliest
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    ####################################################################
+    # Config database, MySQL                                           #
+    ####################################################################
   datasource:
-    url: jdbc:h2:mem:testdb
-    driverClassName: org.h2.Driver
-    username: sa
-    password: password
+    url: jdbc:mysql://localhost:3306/mydatabase?useSSL=false&serverTimezone=UTC
+    username: myusername
+    password: mypassword
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
